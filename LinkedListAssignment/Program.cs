@@ -38,6 +38,11 @@ namespace LinkedListAssignment
             Console.WriteLine("Searching element: ");
 
             list.Search(30);
+
+
+            Console.WriteLine("After deleting 40");
+            list.Delete(40);
+            list.Display();
         }
     }
 }
