@@ -12,10 +12,19 @@ namespace LinkedListAssignment
         {
             Console.WriteLine("Wlcome to LinkedList program");
             LinkedList list = new LinkedList();
-            list.Add(56);
-            list.Add(30);
-            list.Add(70);
+            list.Append(56);
+            //list.Append(30);
+            list.Append(70);
 
+            Console.WriteLine("The list before inserting 30 is : ");
+            list.Display();
+            list.InsertAtParticularPosition(2, 30);
+            Console.WriteLine("The list after inserting 30 is : ");
+
+            list.Display();
+
+            list.RemoveFirstNode();
+            Console.WriteLine("The list after removing first node is : ");
             list.Display();
         }
     }

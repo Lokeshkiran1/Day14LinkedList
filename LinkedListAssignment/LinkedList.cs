@@ -10,7 +10,7 @@ namespace LinkedListAssignment
     internal class LinkedList
     {
         internal Node head;
-        internal void Add(int data)
+        internal void Append(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -26,6 +26,40 @@ namespace LinkedListAssignment
             }
             Console.WriteLine("{0} inserted into the list", node.data);
         }
+
+        public void InsertAtParticularPosition(int position, int data)
+        {
+            Node node = new Node(data);
+            if (position < 1)
+                Console.WriteLine("Invalid Position");
+            else if (position == 1)
+            {
+                node.next = head;
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+
+                while (position > 2)
+                {
+                    temp = temp.next;
+                    position--;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
+        }
+
+
+        internal Node RemoveFirstNode()
+        {
+            if (this.head == null)
+                return null;
+            this.head = this.head.next;
+            return this.head;
+        }
+
 
         internal void Display()
         {
