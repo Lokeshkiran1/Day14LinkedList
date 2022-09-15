@@ -43,6 +43,17 @@ namespace LinkedListAssignment
             Console.WriteLine("After deleting 40");
             list.Delete(40);
             list.Display();
+
+            int size = list.Size();
+            Console.WriteLine(size);
+
+            SortedLinkedList sortedLinkedList = new SortedLinkedList();
+
+            Console.WriteLine("-----after sorting --------------");
+            sortedLinkedList.Add(40);
+            sortedLinkedList.Add(20);
+            sortedLinkedList.Add(8);
+            sortedLinkedList.Display();
         }
     }
 }
