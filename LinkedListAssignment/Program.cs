@@ -23,6 +23,10 @@ namespace LinkedListAssignment
 
             list.Display();
 
+            list.InsertAtParticularPosition(3, 40);
+            Console.WriteLine("The list after inserting 40 is :  ");
+            list.Display();
+
             list.RemoveFirstNode();
             Console.WriteLine("The list after removing first node is : ");
             list.Display();

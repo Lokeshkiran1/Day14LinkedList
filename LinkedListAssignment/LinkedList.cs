@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace LinkedListAssignment
 {
-    internal class LinkedList
+    public class LinkedList
     {
         internal Node head;
         internal void Append(int data)
